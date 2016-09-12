@@ -1,0 +1,2 @@
+# auto
+An auto script
