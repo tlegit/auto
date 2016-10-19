@@ -48,7 +48,7 @@ Wowza server instance deployment includes two steps:
 ```
    On a small system (such as *t2.small*), it took approximately 10 minutes for a wowza server to become fully functional. With more powerful systems and VPC endpoint implementation, it should take less time.
 
-   You should be able to login to the deployed wowza server instances via *ssh* and to verify.
+   You should be able to login to the deployed wowza server instances via *ssh* to verify.
 
 
 ##APPENDIX A
