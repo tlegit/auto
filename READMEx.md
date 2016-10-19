@@ -11,7 +11,7 @@ Building a wowza startup package includes three steps:
 1. Download the project source code
 2. Build and publish the build artifacts
 
-**Download the *stageten-wowza-app* project from GitHub**
+**1.1 Download the *stageten-wowza-app* project from GitHub**
 
    $ cd <your-temporary-directory>
    $ git clone https://github.com/lazarentertainment/stageten-wowza-app
@@ -19,7 +19,7 @@ Building a wowza startup package includes three steps:
 
 The project source code should now be downloaded into your local directory.
 
-**Build and publish build artifacts**
+**1.2 Build and publish build artifacts**
 
    $ cd stageten-wowza-app
    $ ./build_for_aws.sh build
@@ -33,16 +33,14 @@ Wowza server instance deployment includes two steps:
 1. Editing the deployment configuration file
 2. Deploying one or more wowza server instances per the deployment configuration file
 
-1. Edit the deployment configuration file as required. Default configuration is provided but not recommended for production work. See **Appendix A** for details. In this example, the *vi* editor is used, but you can just use any editor
-
-**Edit the deployment configuration file as required**
+**2.1 Editing the deployment configuration file**
 
    Default deployment configuration is provided but not recommended for production work. See **Appendix A** for details.
    In this example, the *vi* editor is used, but you can just use any editor.
 
    $ vi lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
 
-**Deploy one or more wowza server instances based on the deployment configuration file**
+**2.2 Deploy one or more wowza server instances based on the deployment configuration file**
 
    $ ./build_for_aws.sh deploy
 
@@ -53,7 +51,7 @@ Wowza server instance deployment includes two steps:
 
 ##APPENDIX A
 
-##The Deployment Configuration file
+###1. The Deployment Configuration file
 
 The deployment configuration file contains the parameters needed to deploy a wowza server instance on aws. After the *Build a wowza startup package* step is done. Assuming you are still in the *stageten-wowza-app* directory, the content of this file should look like this:
 
@@ -94,7 +92,7 @@ The deployment configuration file contains the parameters needed to deploy a wow
 
 The second section defines the default values for these parameters. It is recommended that *STARTUP_PKG_URL* not be changed as it normally points to the latest version of the wowza startup package.
 
-##Changeset that implements the wowza startup package build and deloyment process
+###2. Changeset that implements the wowza startup package build and deloyment process
 
 - [Updated] *stageten-wowza-app/aws_startup/ffmpeg/install_ffmpeg.sh*: script to install FFmpeg tool set on target wowza server instance
 - [Updated] *stageten-wowza-app/aws_startup/startup.xml*: installation configuration file for wowza startup package
@@ -110,7 +108,7 @@ The second section defines the default values for these parameters. It is recomm
               -- *deploy_wowza_startup_package.sh*: script to deploy the wowza startup package to a wowza server instance on aws
               -- *deploy_wowza_startup_package.conf*: configuration file used to deploy the wowza startup package to a wowza server instance on aws
 
-##Location of published build artifacts
+###3. Location of published build artifacts
 
 - Wowza app artifacts are stored in the S3 bucket *repository.systems.stageten.tv*, and can be downloaded from: *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/<release>/wowza-app-<release>.jar*. The URL's of the corresponding message digest files end with .md5 and .sha1 respectively.
 - Wowza startup package artifacts are stored in the S3 bucket *repository.systems.stageten.tv*, and can be downloaded from: *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/<release>/wowza_startup_package-<release>.zip*. The URL's of the corresponding message digest files end with .md5 and .sha1 respectively.
