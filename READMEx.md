@@ -12,18 +12,18 @@ Building a wowza startup package includes three steps:
 2. Build and publish the build artifacts
 
 **1.1 Download the *stageten-wowza-app* project from GitHub**
-
+```
    $ cd <your-temporary-directory>
    $ git clone https://github.com/lazarentertainment/stageten-wowza-app
    (Enter your credentials when prompted)
-
+```
 The project source code should now be downloaded into your local directory.
 
 **1.2 Build and publish build artifacts**
-
+```
    $ cd stageten-wowza-app
    $ ./build_for_aws.sh build
-
+```
    At the end of this step, all build artifacts--which include those of the wowza app and of the wowza startup package--should be generated and published.
 
 ###2. Deploy one or more wowza server instances on aws
@@ -37,13 +37,13 @@ Wowza server instance deployment includes two steps:
 
    Default deployment configuration is provided but not recommended for production work. See **Appendix A** for details.
    In this example, the *vi* editor is used, but you can just use any editor.
-
+```
    $ vi lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
-
+```
 **2.2 Deploy one or more wowza server instances based on the deployment configuration file**
-
+```
    $ ./build_for_aws.sh deploy
-
+```
    On a small system (such as *t2.small*), it took approximately 10 minutes for a wowza server to become fully functional. With more powerful systems and VPC endpoint implementation, it should take less time.
 
    You should be able to login to the deployed wowza server instances via *ssh* and to verify.
