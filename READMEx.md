@@ -41,6 +41,8 @@ Wowza server instance deployment includes two steps:
    $ vi lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
 ```
 **2.2. Deploy one or more wowza server instances based on the deployment configuration file**
+
+   After the deployment configuration file has been updated, one or more wowza server instances can be deployed.
 ```
    $ ./build_for_aws.sh deploy
 ```
