@@ -100,7 +100,7 @@ The second section of the deployment configuration file defines the default valu
 - [Updated] *stageten-wowza-app/aws_startup/startup.xml*: installation configuration file for wowza startup package
 - [Updated] *stageten-wowza-app/lazarMediaServer/build.gradle*: build file for compilation, publishing and deployment of wowza startup package and related artifacts
 - [Updated] *stageten-wowza-app/lazarMediaServer/settings.gradle*: settings file for wowza app project name
-- [Added  ] *stageten-wowza-app/aws_startup/ffmpeg/wowza4.5-byol-ami-1190597c*: directory of FFmpeg tool set compiled on an *aim-1190597* instance
+- [Added  ] *stageten-wowza-app/aws_startup/ffmpeg/wowza4.5-byol-ami-1190597c*: directory of FFmpeg tool set compiled on an *ami-1190597* instance
 - [Added  ] *stageten-wowza-app/aws_startup/tuning/tune.sh*: script to reconfigure media cache size on target wowza server instance
 - [Added  ] *stageten-wowza-app/build_for_aws.sh*: script to build/publish or deploy wowza startup package, or both
 - [Added  ] *stageten-wowza-app/lazarMediaServer/build-wowza-startup-package*, which holds the following files:
@@ -113,4 +113,4 @@ The second section of the deployment configuration file defines the default valu
 ###3. Location of published build artifacts
 
 - Wowza app artifacts are stored in the S3 bucket *repository.systems.stageten.tv*, and can be downloaded from: *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/[release]/wowza-app-[release].jar*. The URL's of the corresponding message digest files end with .md5 and .sha1 respectively.
-- Wowza startup package artifacts are stored in the S3 bucket *repository.systems.stageten.tv*, and can be downloaded from: *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/<release>/wowza_startup_package-<release>.zip*. The URL's of the corresponding message digest files end with .md5 and .sha1 respectively.
+- Wowza startup package artifacts are stored in the S3 bucket *repository.systems.stageten.tv*, and can be downloaded from: *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/[release]/wowza_startup_package-[release].zip*. The URL's of the corresponding message digest files end with .md5 and .sha1 respectively.
