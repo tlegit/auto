@@ -6,12 +6,12 @@ The following procedure describes how to:
 
 ###1. Build a wowza startup package
 
-Building a wowza startup package includes three steps:
+Building a wowza startup package includes two steps:
 
 1. Download the project source code
 2. Build and publish the build artifacts
 
-**1.1 Download the *stageten-wowza-app* project from GitHub**
+**1.1. Download the *stageten-wowza-app* project from GitHub**
 ```
    $ cd <your-temporary-directory>
    $ git clone https://github.com/lazarentertainment/stageten-wowza-app
@@ -19,12 +19,12 @@ Building a wowza startup package includes three steps:
 ```
 The project source code should now be downloaded into your local directory.
 
-**1.2 Build and publish build artifacts**
+**1.2. Build and publish build artifacts**
 ```
    $ cd stageten-wowza-app
    $ ./build_for_aws.sh build
 ```
-   At the end of this step, all build artifacts--which include those of the wowza app and of the wowza startup package--should be generated and published.
+   At the end of this step, all build artifacts--which include those of the wowza app and wowza startup package--should be generated and published.
 
 ###2. Deploy one or more wowza server instances on aws
 
@@ -33,14 +33,14 @@ Wowza server instance deployment includes two steps:
 1. Editing the deployment configuration file
 2. Deploying one or more wowza server instances per the deployment configuration file
 
-**2.1 Editing the deployment configuration file**
+**2.1. Editing the deployment configuration file**
 
    Default deployment configuration is provided but not recommended for production work. See **Appendix A** for details.
    In this example, the *vi* editor is used, but you can just use any editor.
 ```
    $ vi lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
 ```
-**2.2 Deploy one or more wowza server instances based on the deployment configuration file**
+**2.2. Deploy one or more wowza server instances based on the deployment configuration file**
 ```
    $ ./build_for_aws.sh deploy
 ```
