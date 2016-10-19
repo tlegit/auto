@@ -89,7 +89,7 @@ The deployment configuration file contains the parameters needed to deploy a wow
 ```
 **NOTES**:
 - *REGION*: must be the region where the image (IMAGE_ID), key pair (KEY_NAME), security groups (SECURITY_GROUP_IDS) and VPC (SUBNET_ID) were created
-- *STARTUP_PKG_URL*: is the URL of the wowza startup package, for example, *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/1.5.1/wowza_startup_package-1.5.1.zip*
+- *STARTUP_PKG_URL*: is the URL of the wowza startup package, for example, *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/<release>/wowza_startup_package-<release>.zip*
 - *WZA_LICENSE_STR*: is the wowza license key provided by wowza. If a WOWZA Streaming Server is installed on the local system, the */usr/local/WowzaStreamingEngine/conf/Server.license* file should contain a license key
 
 The second section defines the default values for these parameters. It is recommended that *STARTUP_PKG_URL* not be changed as it normally points to the latest version of the wowza startup package.
