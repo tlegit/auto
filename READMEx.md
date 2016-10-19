@@ -35,7 +35,7 @@ Wowza server instance deployment includes two steps:
 
 **2.1. Editing the deployment configuration file**
 
-   Default deployment configuration is provided but not recommended for production work. See **Appendix A** for details.
+   Default deployment configuration is provided but not recommended for production work. See **APPENDIX A** for details.
    In this example, the *vi* editor is used, but you can just use any editor.
 ```
    $ vi lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
@@ -54,7 +54,7 @@ Wowza server instance deployment includes two steps:
 ###1. The Deployment Configuration file
 
 The deployment configuration file contains the parameters needed to deploy a wowza server instance on aws. After the *Build a wowza startup package* step is done. Assuming you are still in the *stageten-wowza-app* directory, the content of this file should look like this:
-
+```
    $ cat lazarMediaServer/build/wowza-startup-package/deploy_wowza_startup_package.conf
    #
    # Configuration file for deploying a wowza startup package on a pre-built wowza instance or instances in aws
@@ -84,7 +84,7 @@ The deployment configuration file contains the parameters needed to deploy a wow
    STARTUP_PKG_URL=${STARTUP_PKG_URL:=<URL-of-startup-package>}
    WOWZA_LICENSE_STR=${WOWZA_LICENSE_STR:=<wowza-license-string>}
    #
-
+```
 **NOTES**:
 *REGION*: must be the region where the image (IMAGE_ID), key pair (KEY_NAME), security groups (SECURITY_GROUP_IDS), VPC (SUBNET_ID) were created
 *STARTUP_PKG_URL*: is the URL of the wowza startup package, for example, *https://s3.amazonaws.com/repository.systems.stageten.tv/releases/tv/stageten/wowza-app/1.5.1/wowza_startup_package-1.5.1.zip*
