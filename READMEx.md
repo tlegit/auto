@@ -4,7 +4,7 @@ The following procedure describes how to:
 - build and publish a wowza startup package, and
 - use it to deploy one or more wowza server instances on aws
 
-##Build a wowza startup package
+###1. Build a wowza startup package
 
 Building a wowza startup package includes three steps:
 
@@ -26,7 +26,7 @@ The project source code should now be downloaded into your local directory.
 
    At the end of this step, all build artifacts--which include those of the wowza app and of the wowza startup package--should be generated and published.
 
-##Deploy one or more wowza server instances on aws
+###2. Deploy one or more wowza server instances on aws
 
 Wowza server instance deployment includes two steps:
 
