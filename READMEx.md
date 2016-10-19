@@ -104,11 +104,11 @@ The second section of the deployment configuration file defines the default valu
 - [Added  ] *stageten-wowza-app/aws_startup/tuning/tune.sh*: script to reconfigure media cache size on target wowza server instance
 - [Added  ] *stageten-wowza-app/build_for_aws.sh*: script to build/publish or deploy wowza startup package, or both
 - [Added  ] *stageten-wowza-app/lazarMediaServer/build-wowza-startup-package*, which holds the following files:
-              -- *README.md*: this file
-              -- *build_ffmpeg_for_wowza_ami.sh*: script to build the FFmpeg tool set for CentOS (compatible with Amazon Linux)
-              -- *create_wowza_startup_package.sh*: script to create a wowza startup package
-              -- *deploy_wowza_startup_package.sh*: script to deploy the wowza startup package to a wowza server instance on aws
-              -- *deploy_wowza_startup_package.conf*: configuration file used to deploy the wowza startup package to a wowza server instance on aws
+              - *README.md*: this file
+              - *build_ffmpeg_for_wowza_ami.sh*: script to build the FFmpeg tool set for CentOS (compatible with Amazon Linux)
+              - *create_wowza_startup_package.sh*: script to create a wowza startup package
+              - *deploy_wowza_startup_package.sh*: script to deploy the wowza startup package to a wowza server instance on aws
+              - *deploy_wowza_startup_package.conf*: configuration file used to deploy the wowza startup package to a wowza server instance on aws
 
 ###3. Location of published build artifacts
 
